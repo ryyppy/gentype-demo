@@ -15,6 +15,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "bs:build": "bsb -make-world",
+    "bs:clean": "bsb -clean-world",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -28,6 +30,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "bs-platform": "^4.0.7"
+    "bs-platform": "^4.0.7",
+    "reason-react": "^0.5.3"
   }
 }
