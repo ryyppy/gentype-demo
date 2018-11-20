@@ -3,9 +3,7 @@ import ts_logo from "./assets/ts_logo.svg";
 import reason_logo from "./assets/reason_logo2.svg";
 import ocaml_logo from "./assets/ocaml_logo.svg";
 
-type Language = "reason" | "typescript" | "ocaml";
-
-export default (props: { lang: Language }) => {
+export default (props: { lang: string }) => {
   let src;
 
   switch (props.lang) {
