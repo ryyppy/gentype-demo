@@ -12,19 +12,26 @@ const Curry = require('bs-platform/lib/es6/curry.js');
 // tslint:disable-next-line:no-var-requires
 const ReasonReact = require('reason-react/src/ReasonReact.js');
 
+// tslint:disable-next-line:interface-over-type-literal
+export type rgb = {
+  readonly r: string, 
+  readonly g: string, 
+  readonly b: string
+};
+
 // tslint:disable-next-line:max-classes-per-file 
 export abstract class ColorBlue { protected opaque!: any }; /* simulate opaque types */
 
 export const Blue: ColorBlue = 0 as any;
 
 // tslint:disable-next-line:max-classes-per-file 
-export abstract class ColorOrange { protected opaque!: any }; /* simulate opaque types */
+export abstract class ColorRgb { protected opaque!: any }; /* simulate opaque types */
 
-export const Orange: ColorOrange = 1 as any;
+export const Rgb: (_1:rgb) => ColorRgb = function _(Arg1) { return CreateBucklescriptBlock.__(0 as any, [[Arg1.r, Arg1.g, Arg1.b]]) }
 
 export type color =
   | ColorBlue
-  | ColorOrange;
+  | ColorRgb;
 
 // tslint:disable-next-line:interface-over-type-literal
 export type Props = {

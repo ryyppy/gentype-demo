@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import LangBox from "./LangBox";
 import "./style.css";
-import ColorSquare, {Blue, Orange} from "./ColorSquare.gen";
-
+// import ColorSquare, {Blue, Orange} from "./ColorSquare.gen";
+// Rgb is a function that takes values for r, g, and b
+import ColorSquare, {Blue, Rgb} from "./ColorSquare.gen";
+// export abstract class ColorRgb { protected opaque!: any }; /* simulate opaque types */
+// above is tsx generated representation of Rgb values
 class App extends Component {
   render() {
     return (
@@ -16,7 +19,8 @@ class App extends Component {
           </section>
           <section className="w6 center pv6 bg-sand">
             <ColorSquare color={Blue} size="100px"/>
-            <ColorSquare color={Orange} size="100px"/>
+            {/* pass rgb values for black to Rgb() */}
+            <ColorSquare color={Rgb({r:"00",g:"00",b:"00",})} size="100px"/>
           </section>
           <section className="pv6 bg-sand-lighten-20">
             <div className="flex flex-row justify-around">

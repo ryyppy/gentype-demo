@@ -33,7 +33,13 @@ function make(color, size, _children) {
             component[/* willUpdate */7],
             component[/* shouldUpdate */8],
             (function (_self) {
-                var colorStr = color ? "orange" : "blue";
+                var colorStr;
+                if (color) {
+                  var match = color[0];
+                  colorStr = "#" + (String(match[/* r */0]) + ("" + (String(match[/* g */1]) + ("" + (String(match[/* b */2]) + "")))));
+                } else {
+                  colorStr = "blue";
+                }
                 var style = {
                   backgroundColor: colorStr,
                   height: size,
