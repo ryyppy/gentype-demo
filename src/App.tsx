@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LangBox from "./LangBox";
 import "./style.css";
+import ColorSquare from "./ColorSquare.gen";
 
 class App extends Component {
   render() {
@@ -12,6 +13,9 @@ class App extends Component {
         <main className="f2 tc">
           <section className="w6 center pv6 bg-sand">
             Let's demonstrate some <code>genType</code> action!
+          </section>
+          <section className="w6 center pv6 bg-sand">
+            <ColorSquare color="red" size="100px"/>
           </section>
           <section className="pv6 bg-sand-lighten-20">
             <div className="flex flex-row justify-around">
