@@ -26,6 +26,9 @@ let make = (~color: color, ~size: string, _children) => {
       ~width=size,
       (),
     );
-    <div style />;
+    <div style>
+    /* <div style /> */
+    <LangBoxRe lang="ocaml" />
+    </div>;
   },
 };

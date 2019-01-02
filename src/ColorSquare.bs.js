@@ -3,6 +3,7 @@
 var Block = require("bs-platform/lib/js/block.js");
 var React = require("react");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var LangBoxReGen = require("./LangBoxRe.gen");
 
 var component = ReasonReact.statelessComponent("ColorSquare");
 
@@ -47,7 +48,7 @@ function make(color, size, _children) {
                 };
                 return React.createElement("div", {
                             style: style
-                          });
+                          }, ReasonReact.element(undefined, undefined, LangBoxReGen.make("ocaml", /* array */[])));
               }),
             component[/* initialState */10],
             component[/* retainedProps */11],
