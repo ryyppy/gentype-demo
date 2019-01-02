@@ -4,14 +4,31 @@
 const ColorSquareBS = require('./ColorSquare.bs');
 
 // tslint:disable-next-line:no-var-requires
+const CreateBucklescriptBlock = require('bs-platform/lib/es6/block.js');
+
+// tslint:disable-next-line:no-var-requires
 const Curry = require('bs-platform/lib/es6/curry.js');
 
 // tslint:disable-next-line:no-var-requires
 const ReasonReact = require('reason-react/src/ReasonReact.js');
 
+// tslint:disable-next-line:max-classes-per-file 
+export abstract class ColorBlue { protected opaque!: any }; /* simulate opaque types */
+
+export const Blue: ColorBlue = 0 as any;
+
+// tslint:disable-next-line:max-classes-per-file 
+export abstract class ColorOrange { protected opaque!: any }; /* simulate opaque types */
+
+export const Orange: ColorOrange = 1 as any;
+
+export type color =
+  | ColorBlue
+  | ColorOrange;
+
 // tslint:disable-next-line:interface-over-type-literal
 export type Props = {
-  readonly color: string, 
+  readonly color: color, 
   readonly size: string, 
   readonly children?: unknown
 };

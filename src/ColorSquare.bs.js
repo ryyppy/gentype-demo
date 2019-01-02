@@ -33,8 +33,9 @@ function make(color, size, _children) {
             component[/* willUpdate */7],
             component[/* shouldUpdate */8],
             (function (_self) {
+                var colorStr = color ? "orange" : "blue";
                 var style = {
-                  backgroundColor: color,
+                  backgroundColor: colorStr,
                   height: size,
                   width: size
                 };

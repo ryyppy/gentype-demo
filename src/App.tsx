@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import LangBox from "./LangBox";
 import "./style.css";
-import ColorSquare from "./ColorSquare.gen";
+import ColorSquare, {Blue, Orange} from "./ColorSquare.gen";
 
 class App extends Component {
   render() {
@@ -15,7 +15,8 @@ class App extends Component {
             Let's demonstrate some <code>genType</code> action!
           </section>
           <section className="w6 center pv6 bg-sand">
-            <ColorSquare color="red" size="100px"/>
+            <ColorSquare color={Blue} size="100px"/>
+            <ColorSquare color={Orange} size="100px"/>
           </section>
           <section className="pv6 bg-sand-lighten-20">
             <div className="flex flex-row justify-around">
