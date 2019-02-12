@@ -10,5 +10,13 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bsc-flags": ["-bs-no-version-header", "-bs-super-errors", "-bs-g"]
+  "bsc-flags": ["-bs-no-version-header", "-bs-super-errors", "-bs-g"],
+  "gentypeconfig": {
+    "language": "typescript",
+    "shims": {},
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+}
 }
